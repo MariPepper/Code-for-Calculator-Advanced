@@ -58,7 +58,7 @@ public class Program
 				float Differ2 = new float();
 				float Product2 = new float();
 				float totalDiv2 = new float();
-                Console.WriteLine("UFCD: 6052, Manhã");
+				Console.WriteLine("UFCD: 6052, Manhã");
                 Console.WriteLine("Outro Comentário");
                 for (int a = 1; a <= 2; a++)
                 {
@@ -92,29 +92,32 @@ public class Program
 						//I want to skip to the next step.
 						break;
 					}
-				}			
-//A seguir vem a subtração.	
-	    Console.WriteLine("Do you want to do a subtraction operation in the " + name + "?(yes/no)");
-	    Answer2 = Console.ReadLine();
-	    if (Answer2 == "yes")
-				{
-					while (!label4)
+				}
+//A seguir vem a subtração.
+				for (int a = 1; a <= 2; a++)
+                {
+				    Console.WriteLine("Do you want to do a subtraction operation in the " + name + "?(yes/no)");
+					Answer2 = Console.ReadLine();
+					if (Answer2 == "yes")
 					{
-						Console.Write("Enter the first number to subtract: "); 
-						number3 = Console.ReadLine();
-						label4 = float.TryParse(number3, out num3);
-					}
-					while (!label5)
-					{
-						Console.Write("Enter the second number to subtract: ");
-						number4 = Console.ReadLine();
-						label5 = float.TryParse(number4, out num4);	
-					}
-					if (!label6)
-					{
-						label6 = float.TryParse(Differ1, out Differ2);
-						Differ2 = num3 - num4;
-						Console.WriteLine("The difference of {0} - {1} = {2} ", num3, num4, Differ2);
+						while (!label4)
+						{
+							Console.Write("Enter the first number to subtract: "); 
+						    number3 = Console.ReadLine();
+						    label4 = float.TryParse(number3, out num3);
+					    }
+					    while (!label5)
+					    {
+						    Console.Write("Enter the second number to subtract: ");
+						    number4 = Console.ReadLine();
+						    label5 = float.TryParse(number4, out num4);	
+					    }
+						if (!label6)
+					    {
+						    label6 = float.TryParse(Differ1, out Differ2);
+						    Differ2 = num3 - num4;
+						    Console.WriteLine("The difference of {0} - {1} = {2} ", num3, num4, Differ2);
+						}
 					}
 					else 
 					{
@@ -124,6 +127,8 @@ public class Program
 					}
 				}
 //A seguir vem a multiplicação.
+				for (int a = 1; a <= 2; a++)
+				{
                     Console.WriteLine("Do you want to do a multiplication operation in the " + name + "?(yes/no)");
                     Answer3 = Console.ReadLine();
                     if (Answer3 == "yes")
@@ -146,14 +151,17 @@ public class Program
 							Product2 = num5 * num6;
 							Console.WriteLine("The product of {0} * {1} = {2} ", num5, num6, Product2);
 						}
-						else 
-						{
-							Console.WriteLine("Let's skip to the next step. \n\n");
-							//I want to skip to the next step.
-							break;
-						}				
 					}
+					else 
+					{
+						Console.WriteLine("Let's skip to the next step. \n\n");
+						//I want to skip to the next step.
+						break;
+					}
+				}
 //A seguir vem a divisão.
+				for (int a = 1; a <= 2; a++)
+                {
                     Console.WriteLine("Do you want to do a division operation in the " + name + "?(yes/no)");
                     Answer4 = Console.ReadLine();
                     if (Answer4 == "yes")
@@ -176,13 +184,14 @@ public class Program
 							totalDiv2 = num7 / num8;
 							Console.WriteLine("The product of {0} / {1} = {2} ", num7, num8, totalDiv2);
 						}
-						else 
-						{
-							Console.WriteLine("Let's skip to the next step. \n\n");
-							//I want to skip to the next step.
-							break;
-						}				
-					}				
+					}
+					else 
+					{
+						Console.WriteLine("Let's skip to the next step. \n\n");
+						//I want to skip to the next step.
+						break;
+					}
+				}
 			}
 		while (true);
 	}
