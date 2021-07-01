@@ -154,7 +154,7 @@ public class Program
 						}				
 					}
 //A seguir vem a divisão.
-                 Console.WriteLine("Do you want to do a division operation in the " + name + "?(yes/no)");
+                    Console.WriteLine("Do you want to do a division operation in the " + name + "?(yes/no)");
                     Answer4 = Console.ReadLine();
                     if (Answer4 == "yes")
 					{
