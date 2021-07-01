@@ -192,7 +192,7 @@ public class Program
 				}
 			}
 		}
-		while (true);
+		while (!confirmed);
 	}
 }
 			
