@@ -94,9 +94,9 @@ public class Program
 					}
 				}			
 //A seguir vem a subtração.	
-				Console.WriteLine("Do you want to do a subtraction operation in the " + name + "?(yes/no)");
-				Answer2 = Console.ReadLine();
-				if (Answer2 == "yes")
+	    Console.WriteLine("Do you want to do a subtraction operation in the " + name + "?(yes/no)");
+	    Answer2 = Console.ReadLine();
+	    if (Answer2 == "yes")
 				{
 					while (!label4)
 					{
