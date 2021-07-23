@@ -18,7 +18,7 @@ public class Program
 		bool label11 = false;
 		bool label12 = false;		
 		string name = "Calculator";
-        string Answer1 = "";
+                string Answer1 = "";
 		string Answer2 = "";
 		string Answer3 = "";
 		string Answer4 = "";
@@ -55,8 +55,8 @@ public class Program
 		float Differ2 = new float();
 		float Product2 = new float();
 		float totalDiv2 = new float();
-			Console.WriteLine("UFCD: 6052, Manhã");
-			Console.WriteLine("Outro Comentário");			
+	        Console.WriteLine("UFCD: 6052, Manhã");
+		Console.WriteLine("Outro Comentário");			
 //A seguir vem a soma.
 		do
 		{
@@ -98,7 +98,7 @@ public class Program
 			do
 			{
 				Console.WriteLine("Do you want to do a subtraction operation in the " + name + "?(yes/no)");
-		        Answer2 = Console.ReadLine();
+		                Answer2 = Console.ReadLine();
 				if (Answer2 == "yes")
 				{
 					while (!label4)
@@ -133,8 +133,8 @@ public class Program
 			do
 			{
 				Console.WriteLine("Do you want to do a multiplication operation in the " + name + "?(yes/no)");
-                Answer3 = Console.ReadLine();
-                if (Answer3 == "yes")
+                                Answer3 = Console.ReadLine();
+                                if (Answer3 == "yes")
 				{
 					while (!label7)
 					{
@@ -168,8 +168,8 @@ public class Program
 			do
 			{			
 				Console.WriteLine("Do you want to do a division operation in the " + name + "?(yes/no)");
-                Answer4 = Console.ReadLine();
-                if (Answer4 == "yes")
+                                Answer4 = Console.ReadLine();
+                                if (Answer4 == "yes")
 				{
 					while (!label10)
 					{
