@@ -1,0 +1,95 @@
+#include <LiquidCrystal.h>
+#include<math.h>
+#define PI 3.14159
+const int rs=2, en=3, d4=4, d5=5, d6=6 , d7=7;
+LiquidCrystal lcd(rs, en, d4, d5, d6 , d7);
+char timeline[16];
+bool math = true;
+String dadosRecebidos = "";
+String dadosRecebidos1 = "";
+String dadosRecebidos2 = "";
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  lcd.begin(16, 2);
+  lcd.print("Leitura: ");
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  do{
+    Serial.println("\n Bom dia.");
+    delay(500);
+    switch ('A')
+    {
+    case 'A':  
+  Serial.println("\n Área de um circulo de raio: ");
+  dadosRecebidos = Serial.readStringUntil('\n');
+  Serial.println("\n " + dadosRecebidos);
+  float resultado = radius(dadosRecebidos.toFloat());
+  Serial.println(resultado); 
+  lcd.print(resultado);
+  delay(500);
+  lcd.clear();
+  break;
+    }
+      switch ('B')
+  {
+    case 'B':
+  Serial.println("\n Área de um quadrado de: ");
+  dadosRecebidos = Serial.readStringUntil('\n');
+  Serial.println("\n " + dadosRecebidos);
+  float resultado = altura(dadosRecebidos.toFloat());
+  Serial.println(resultado);
+  lcd.print(resultado);
+  delay(500);
+  lcd.clear();
+  break;
+  }
+  switch ('C')
+  {
+    case 'C':
+  Serial.println("\n Largura do triângulo: ");
+  dadosRecebidos1 = Serial.readStringUntil('\n');
+  Serial.println("\n "+ dadosRecebidos1);
+  delay(500);
+  Serial.println("\n Altura do triângulo: ");
+  dadosRecebidos2 = Serial.readStringUntil('\n');
+  Serial.println("\n " + dadosRecebidos2);
+  delay(500);
+  float resultado = triangulo(dadosRecebidos1.toFloat() * dadosRecebidos2.toFloat()/2);
+  Serial.println(resultado);
+  lcd.print(resultado);
+  delay(500);
+  break;
+  }
+  }
+  while(math);
+}
+
+int radius(float r){
+float resultado = 2.00f;
+resultado = r * r * PI;
+Serial.print("\n Área do círculo: ");
+Serial.print("r * r * PI = "); 
+return resultado;
+}
+
+int altura(float x){
+float resultado = 2.00f;
+resultado = x * x;
+Serial.print("\n Área do quadrado: ");
+Serial.print("a * l = ");
+return resultado;
+}
+
+int triangulo(float t){
+float x = dadosRecebidos1.toFloat();
+float y = dadosRecebidos2.toFloat();
+float resultado = 2.00f;
+resultado = (x * y)/2;
+Serial.print("\n Área do triângulo: ");
+Serial.print("a * l/2 = ");
+return resultado;
+}
