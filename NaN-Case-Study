@@ -1,0 +1,54 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		int opcao;
+		int a, b;
+		bool opsair = false;
+		double cata, catb, hipo, hpt;
+		Console.WriteLine("Menu:");
+		Console.WriteLine("1 - Calcular hipotenusa:");
+		Console.WriteLine("2 - Calcular catetos:");
+		Console.WriteLine("0 - Sair:");
+		do
+		{
+			Console.WriteLine("Insira uma opcao do menu:");
+			opcao = Convert.ToInt32(Console.ReadLine());
+			if (opcao == 0)
+			{
+				opsair = true;
+			}
+			if (opcao == 1 || opcao == 2)
+			{
+				switch (opcao)
+				{
+					case 1:
+						Console.WriteLine("\n Por favor insira dois valores para os catetos:");
+						a = (int)Convert.ToDouble(Console.ReadLine());
+						b = (int)Convert.ToDouble(Console.ReadLine());
+						hipo = Math.Sqrt(a * a + b * b);
+						Console.WriteLine("O calculo da hipotenusa é:\n {0}^{0} + {1}^{1} = {2}\n", a, b, hipo);
+						break;
+					case 2:
+						Console.WriteLine("\n Insira um valor para a hipotenusa e cateto b:");
+						b = (int)Convert.ToDouble(Console.ReadLine());
+						hpt = (int)Convert.ToDouble(Console.ReadLine());
+						cata = Math.Sqrt(b * b - hpt * hpt);
+						Console.WriteLine("\n O resultado é:\n {0}*{0} - {1}*{1} = {2}\n", b, hpt, cata);
+						Console.WriteLine("Insira um valor para a hipotenusa e cateto a:");
+						a = (int)Convert.ToDouble(Console.ReadLine());
+						hpt = (int)Convert.ToDouble(Console.ReadLine());
+						catb = Math.Sqrt(a * a - hpt * hpt);
+						Console.WriteLine("\n O resultado é:\n {0}*{0} - {1}*{1} = {2}\n", a, hpt, catb);
+						break;
+
+				}
+				//Console.WriteLine("Insira novamente uma opcao do menu:" + "Opcão selecionada inválida:");
+				//opcao = Convert.ToInt32(Console.ReadLine());
+			}
+		}
+		while (opsair != true);
+	}
+}
