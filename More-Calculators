@@ -1,0 +1,34 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+  	double x, y;
+		int a, b;
+		double sum, sub, area, hipo;
+		Console.WriteLine("Por favor insira dois valores:");
+		x = Convert.ToDouble(Console.ReadLine());
+		y = Convert.ToDouble(Console.ReadLine());
+		sum = x + y;
+		Console.WriteLine("O total da soma é: \n {0} + {1} = {2}\n", x, y, sum);
+		Console.WriteLine("Por favor insira dois valores:");
+		x = Convert.ToDouble(Console.ReadLine());
+		y = Convert.ToDouble(Console.ReadLine());
+		sub = x - y;
+		Console.WriteLine("O total da subtração é:\n {0} - {1} = {2}\n", x, y, sub);
+		Console.WriteLine("Por favor insira três valores:");
+		x = Convert.ToDouble(Console.ReadLine());
+		y = Convert.ToDouble(Console.ReadLine());
+		area = x * y / 2;
+		Console.WriteLine("O total da área é:\n {0} * {1} /2 = {2}\n", x, y, area);
+		//A Console.ReadLine só vai buscar strings, é preciso primeiro converter o valor inserido para inteiro.
+		Console.WriteLine("Por favor insira dois valores para os catetos:");
+		a = (int)Convert.ToDouble(Console.ReadLine());
+		b = (int)Convert.ToDouble(Console.ReadLine());
+		hipo = Math.Sqrt(a * a + b * b);
+		//		hipo = Math.Pow((a * a + b * b), 0.5);
+		Console.WriteLine("O calculo da hipotenusa é:\n {0}^{0} + {1}^{1} = {2}\n", a, b, hipo);
+		//A Console.ReadLine só vai buscar strings, é preciso primeiro converter o valor inserido para inteiro ou double.
+	}
+}    
